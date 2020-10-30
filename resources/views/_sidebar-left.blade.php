@@ -20,7 +20,7 @@
     <li>
         <a
             class="font-bold text-lg mb-4 block"
-            href="{{ auth()->user() ? route('profile', auth()->user()) : '' }}"
+            href="{{ auth()->user() ? auth()->user()->profilePath() : '' }}"
         >
             Profile
         </a>

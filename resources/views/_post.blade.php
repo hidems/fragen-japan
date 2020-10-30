@@ -1,8 +1,8 @@
 <div class="flex p-4 border-b border-b-gray-400">
     <div class="mr-2 flex-shrink-0">
-        <a href="{{ $post->user_id ? route('profile', $post->user) : '' }}">
+        <a href="{{ $post->user_id ? $post->user->profilePath() : '' }}">
             <img
-                src="/images/default-avatar.jpeg"
+                src={{ $post->user_id ? $post->user->avatar : 'images/default-avatar.jpeg' }}
                 alt=""
                 class="rounded-full mr-2"
                 width="50"
@@ -13,7 +13,7 @@
 
     <div>
         <h5 class="font-bold mb-2">
-            <a href="{{ $post->user_id ? route('profile', $post->user) : '' }}">
+            <a href="{{ $post->user_id ? $post->user->profilePath() : '' }}">
                 {{ $post->user_id ? $post->user->name : "Ich habe eine Frage!!" }}
             </a>
         </h5>

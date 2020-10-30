@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'username', 'avatar', 'name', 'email', 'password',
     ];
 
     /**
@@ -44,8 +44,24 @@ class User extends Authenticatable
 
     public function getAvatarAttribute($value)
     {
-        return "/images/default-avatar.jpeg";
-        // return asset($value ? 'storage/' . $value : 'images/default-avatar.jpeg');
+        return asset($value ? 'storage/' . $value : 'images/default-avatar.jpeg');
+    }
+
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
+    }
+
+    public function profilePath()
+    {
+        return route('profile', $this->username);
+    }
+
+    public function path($append = "")
+    {
+        $path = $this->profilePath();
+
+        return $append ? "{$path}/{$append}" : $path;
     }
 
     /**
@@ -53,6 +69,6 @@ class User extends Authenticatable
      */
     public function getRouteKeyName()
     {
-        return 'name';
+        return 'username';
     }
 }

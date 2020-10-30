@@ -18,7 +18,15 @@ Route::get('/', function () {
 Route::get('/posts', 'PostsController@index')->name('home');
 Route::post('/posts', 'PostsController@store');
 
+Route::get('/explore', 'ExploreController@index');
+
 Route::get('/profiles/{user}', 'ProfilesController@show')->name('profile');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profiles/{user}/edit', 'ProfilesController@edit')->middleware('can:edit,user');
+    Route::patch('/profiles/{user}', 'ProfilesController@update')->middleware('can:edit,user');
+});
+
 
 Auth::routes();
 
