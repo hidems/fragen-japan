@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Hash;
 
 class ProfilesController extends Controller
 {
@@ -31,6 +32,8 @@ class ProfilesController extends Controller
         if(request('avatar')) {
             $attributes['avatar'] = request('avatar')->store('avatar');
         }
+
+        $attributes['password'] = Hash::make(request('password'));
 
         $user->update($attributes);
 

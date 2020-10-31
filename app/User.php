@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
@@ -47,10 +48,11 @@ class User extends Authenticatable
         return asset($value ? 'storage/' . $value : 'images/default-avatar.jpeg');
     }
 
-    public function setPasswordAttribute($value)
-    {
-        $this->attributes['password'] = bcrypt($value);
-    }
+    // public function setPasswordAttribute($value)
+    // {
+    //     $attributes['password'] = Hash::make($value);
+    //     $this->attributes['password'] = bcrypt($value);
+    // }
 
     public function profilePath()
     {
