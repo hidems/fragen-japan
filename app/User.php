@@ -48,11 +48,6 @@ class User extends Authenticatable
         // return asset($value ? 'storage/' . $value : 'images/default-avatar.jpeg');
     }
 
-    public function setPasswordAttribute($value)
-    {
-        $this->attributes['password'] = bcrypt($value);
-    }
-
     /**
      * Change key in URL in order to get user from id -> name
      */
