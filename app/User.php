@@ -47,7 +47,10 @@ class User extends Authenticatable
     {
         return asset($value ? 'storage/' . $value : 'images/default-avatar.jpeg');
     }
-
+    /*
+    This method, that makes password Hash, is not necessary,
+    because Hash is executed by each Controllers, such as ProfilesController...
+    */
     // public function setPasswordAttribute($value)
     // {
     //     $attributes['password'] = Hash::make($value);
