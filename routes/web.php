@@ -11,11 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/posts', 'PostsController@index')->name('home');
+Route::get('/', 'PostsController@index')->name('home');
 Route::post('/posts', 'PostsController@store');
 
 Route::get('/explore', 'ExploreController@index');
@@ -27,7 +23,4 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profiles/{user}', 'ProfilesController@update')->middleware('can:edit,user');
 });
 
-
 Auth::routes();
-
-Route::get('/home', 'HomeController@index');

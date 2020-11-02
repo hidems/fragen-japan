@@ -21,16 +21,42 @@
 </head>
 <body>
     <div id="app">
-    {{-- header --}}
+        {{-- header --}}
         <section class="px-8 py-4">
             <header class="container mx-auto">
-                <h1>
-                    <img
-                        src="/images/logo.png"
-                        alt="logo"
-                        class="h-12"
-                    >
-                </h1>
+                <div class="flex justify-between">
+                    {{-- Logo --}}
+                    <h1>
+                        <img
+                            src="/images/logo.png"
+                            alt="logo"
+                            class="h-12"
+                        >
+                    </h1>
+
+                    {{-- Login, Register and Logout --}}
+                    @if (Route::has('login') && request()->path() != 'login' && request()->path() != 'register')
+                        <div class="font-bold text-lg">
+                            @auth
+                                <form method="POST" action="/logout">
+                                    @csrf
+
+                                    <button class="font-bold text-lg text-gray-500 hover:text-gray-700">Logout</button>
+                                </form>
+                            @else
+                                <a class="text-gray-500 hover:text-gray-700 mr-5" href="{{ route('login') }}">
+                                    Login
+                                </a>
+                                @if (Route::has('register'))
+                                    <a class="text-gray-500 hover:text-gray-700" href="{{ route('register') }}">
+                                        Register
+                                    </a>
+                                @endif
+                            @endauth
+                        </div>
+                    @endif
+
+                </div>
            </header>
         </section>
 

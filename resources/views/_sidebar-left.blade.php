@@ -1,7 +1,7 @@
 <ul>
     <li>
         <a
-            class="font-bold text-lg mb-4 block"
+            class="font-bold text-lg mb-4 block text-gray-700 hover:text-gray-900"
             href="{{ route('home') }}"
         >
             Home
@@ -10,7 +10,7 @@
 
     <li>
         <a
-            class="font-bold text-lg mb-4 block"
+            class="font-bold text-lg mb-4 block text-gray-700 hover:text-gray-900"
             href="/explore"
         >
             Explore User
@@ -18,19 +18,13 @@
     </li>
 
     <li>
-        <a
-            class="font-bold text-lg mb-4 block"
-            href="{{ auth()->user() ? auth()->user()->profilePath() : '' }}"
-        >
-            Profile
-        </a>
-    </li>
-
-    <li>
-        <form method="POST" action="/logout">
-            @csrf
-
-            <button class="font-bold text-lg">Logout</button>
-        </form>
+        @auth
+            <a
+                class="font-bold text-lg mb-4 block text-gray-700 hover:text-gray-900"
+                href="{{ auth()->user() ? auth()->user()->profilePath() : '' }}"
+            >
+                Profile
+            </a>
+        @endauth
     </li>
 </ul>
