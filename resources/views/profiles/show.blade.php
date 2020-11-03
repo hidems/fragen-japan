@@ -39,6 +39,6 @@
     </header>
 
     @include('_timeline', [
-        'posts' => $user->posts()->latest()->get()
+        'posts' => $posts
     ])
 @endcomponent
