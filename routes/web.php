@@ -14,7 +14,7 @@
 Route::get('/', 'PostsController@index')->name('home');
 Route::post('/posts', 'PostsController@store');
 
-Route::get('/explore', 'ExploreController@index');
+Route::get('/explore', 'ExploreController');
 
 Route::get('/profiles/{user}', 'ProfilesController@show')->name('profile');
 

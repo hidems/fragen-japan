@@ -6,6 +6,7 @@
             name="body"
             class="w-full"
             placeholder="What's up doc?"
+            required
             autofocus
         ></textarea>
 
@@ -13,7 +14,7 @@
 
         <footer class="flex justify-between items-center">
             <img
-                src="/images/default-avatar.jpeg"
+                src={{ auth()->user() ? auth()->user()->avatar : 'images/default-avatar.jpeg' }}
                 alt="your avatar"
                 class="rounded-full mr-2"
                 width="50"
