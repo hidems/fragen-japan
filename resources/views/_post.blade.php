@@ -18,8 +18,10 @@
             </a>
         </h5>
 
-        <p class="text-sm mb-3">
-            {{ $post->body }}
-        </p>
+        <a href="/posts/{{ $post->id }}">
+            <p class="text-sm mb-3">
+                {{ $post->body }}
+            </p>
+        </a>
     </div>
 </div>

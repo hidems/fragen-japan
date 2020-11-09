@@ -12,7 +12,10 @@
 */
 
 Route::get('/', 'PostsController@index')->name('home');
-Route::post('/posts', 'PostsController@store');
+Route::post('/', 'PostsController@store');
+
+Route::get('/posts/{id}', 'PostsController@show_post_page');
+Route::post('/posts/{id}', 'PostsController@store_comment');
 
 Route::get('/explore', 'ExploreController');
 

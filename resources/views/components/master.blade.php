@@ -60,6 +60,21 @@
            </header>
         </section>
 
+        {{--
+        <section>
+            <div class="container mx-auto">
+                <div class="flex items-center">
+                    <div>
+                        <p>F&A Seite von Japan</p>
+                        <h1>Fragen über Japan</h1>
+                        <h2>Lassen Sie uns über Japan diskutieren!!</h2>
+                        <p>Hier konnen Sie über Japan fragen, und Ihnen Antwort hilft allen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        --}}
+
         {{ $slot }}
 
     </div>

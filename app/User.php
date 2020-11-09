@@ -43,6 +43,11 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
     public function getAvatarAttribute($value)
     {
         return asset($value ? 'storage/' . $value : 'images/default-avatar.jpeg');

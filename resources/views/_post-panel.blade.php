@@ -1,11 +1,11 @@
 <div class="border border-blue-400 rounded-lg px-8 py-6 mb-8">
-    <form method="POST" action="/posts">
+    <form method="POST" action="/">
         @csrf
 
         <textarea
             name="body"
             class="w-full"
-            placeholder="What's up doc?"
+            placeholder="Was ist Ihre Frage?"
             required
             autofocus
         ></textarea>
