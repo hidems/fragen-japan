@@ -67,7 +67,7 @@
 <h2 class="mt-8 font-bold text-xl">Ihre Antwort</h2>
 <hr>
 <div class="border border-blue-400 rounded-lg px-8 py-6 mt-4 mb-8">
-    <form method="POST" action="/posts/{{$post->id}}">
+    <form method="POST" action="{{ $post->path() }}">
         @csrf
 
         <textarea

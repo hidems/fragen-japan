@@ -14,7 +14,7 @@
 Route::get('/', 'PostsController@index')->name('home');
 Route::post('/', 'PostsController@store');
 
-Route::get('/posts/{id}', 'PostsController@show_post_page');
+Route::get('/posts/{id}', 'PostsController@show_post_page')->name('post');
 Route::post('/posts/{id}', 'PostsController@store_comment');
 
 Route::get('/explore', 'ExploreController');
