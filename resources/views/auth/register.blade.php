@@ -1,8 +1,13 @@
 @component('components.master')
 <div class="container mx-auto flex justify-center">
     <div class="px-12 py-8 bg-gray-200 border border-gray-300 rounded-lg">
-        <div class="font-bold text-lg mb-4">
-            Register
+        <div class="flex justify-between items-end mb-4">
+            <div class="font-bold text-xl">
+                Register
+            </div>
+            <div class="text-xs text-gray-600 hover:text-gray-800 hover:underline">
+                <a href="{{ route('home') }}">Home</a>
+            </div>
         </div>
 
         <form method="POST" action="{{ route('register') }}">
@@ -110,12 +115,18 @@
                 @enderror
             </div>
 
-            <div>
+            <div class="flex items-center">
                 <button type="submit"
                         class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500"
                 >
                     Register
                 </button>
+
+                <div class="ml-6 text-xs text-gray-600 hover:text-gray-800 hover:underline">
+                        <a href="{{ route('login') }}">
+                            Login
+                        </a>
+                </div>
             </div>
         </form>
     </div>

@@ -25,11 +25,13 @@
             <div class="flex justify-between items-center">
                 {{-- Logo --}}
                 <h1 class="logo">
-                    <img
-                        src="/images/logo.png"
-                        alt="logo"
-                        class="h-12"
-                    >
+                    <a href="{{ route('home') }}">
+                        <img
+                            src="/images/logo.png"
+                            alt="logo"
+                            class="h-12"
+                        >
+                    </a>
                 </h1>
 
                 {{-- Login, Register and Logout --}}
