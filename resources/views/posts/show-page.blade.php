@@ -23,6 +23,10 @@
         <p class="text-sm mb-3">
             {{ $post->body }}
         </p>
+
+        <div class="">
+            <p class="text-xs text-gray-500">Posted {{ $post->created_at->diffForHumans() }}</p>
+        </div>
     </div>
 </div>
 
@@ -54,6 +58,10 @@
             <p class="text-sm mb-3">
                 {{ $comment->body }}
             </p>
+
+            <div class="">
+                <p class="text-xs text-gray-500">Posted {{ $comment->created_at->diffForHumans() }}</p>
+            </div>
         </div>
     </div>
     @empty
