@@ -23,7 +23,7 @@
                 </label>
 
                 <input class="border border-gray-400 p-2 w-full"
-                       type="text"
+                       type="email"
                        name="email"
                        id="email"
                        autocomplete="email"
