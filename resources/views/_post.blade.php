@@ -1,4 +1,5 @@
 <div class="flex p-4 border-b border-b-gray-400">
+    {{-- User photo --}}
     <div class="mr-2 flex-shrink-0">
         <a href="{{ $post->user_id ? $post->user->profilePath() : '' }}">
             <img
@@ -11,7 +12,8 @@
         </a>
     </div>
 
-    <div>
+    <div class="w-full">
+        {{-- Name --}}
         <div class="mb-1">
             <h5 class="font-bold">
                 <a href="{{ $post->user_id ? $post->user->profilePath() : '' }}">
@@ -20,13 +22,15 @@
             </h5>
         </div>
 
+        {{-- Body --}}
         <a href="{{ $post->path() }}">
             <p class="text-sm mb-2">
                 {{ $post->body }}
             </p>
         </a>
 
-        <div class="flex items-center">
+        {{-- Number of commnet, commwnt date... --}}
+        <div class="lg:flex lg:items-center">
             {{-- <button class="bg-green-400 hover:bg-green-500 rounded-lg shadow text-xs text-white px-2 py-1 mr-5">
                 <a href="{{ $post->path() }}">
                     Antwort dafür
@@ -47,7 +51,7 @@
                 </div>
             </a>
 
-            <div class="ml-4">
+            <div class="lg:ml-4 ml-6">
                 <p class="text-xs text-gray-500">Posted {{ $post->created_at->diffForHumans() }}</p>
             </div>
         </div>
