@@ -13,7 +13,7 @@
                     @include('_sidebar')
                 </div>
 
-                {{-- Oldsidebar-right --}}
+                {{-- old-sidebar-right --}}
                 {{-- <div class="lg:w-1/6" >
                     @include('_sidebar-right')
                 </div> --}}

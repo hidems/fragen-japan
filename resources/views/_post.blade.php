@@ -29,14 +29,9 @@
             </p>
         </a>
 
-        {{-- Number of commnet, commwnt date... --}}
+        {{-- Number of commnet, Post date... --}}
         <div class="lg:flex lg:items-center">
-            {{-- <button class="bg-green-400 hover:bg-green-500 rounded-lg shadow text-xs text-white px-2 py-1 mr-5">
-                <a href="{{ $post->path() }}">
-                    Antwort dafür
-                </a>
-            </button> --}}
-
+            {{-- Number of comment --}}
             <a href="{{ $post->path() }}">
                 <div class="flex items-center hover:bg-gray-200 rounded-lg px-2 py-1">
                     <svg viewBox="0 0 20 20" class="text-green-500 mr-1 w-3">
@@ -51,6 +46,7 @@
                 </div>
             </a>
 
+            {{-- Post date --}}
             <div class="lg:ml-4 ml-6">
                 <p class="text-xs text-gray-500">Posted {{ $post->created_at->diffForHumans() }}</p>
             </div>
