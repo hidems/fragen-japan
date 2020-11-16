@@ -41,7 +41,9 @@
                             <form method="POST" action="/logout">
                                 @csrf
 
-                                <button class="font-bold text-lg text-gray-500 hover:text-gray-700">Logout</button>
+                                <button class="font-bold text-lg text-gray-500 hover:text-gray-700">
+                                    Abmelden
+                                </button>
                             </form>
                         @else
                             <a class="text-gray-500 hover:text-gray-700 mr-5" href="{{ route('login') }}">
@@ -49,7 +51,7 @@
                             </a>
                             @if (Route::has('register'))
                                 <a class="text-gray-500 hover:text-gray-700" href="{{ route('register') }}">
-                                    Register
+                                    Anmelden
                                 </a>
                             @endif
                         @endauth

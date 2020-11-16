@@ -28,7 +28,9 @@
             </a></li>
             <form method="POST" action="/logout">
                 @csrf
-                <button class="border-b-4 border-white">Logout</button>
+                <button class="border-b-4 border-white">
+                    Abmelden
+                </button>
             </form>
         @else
             <li><a
@@ -39,7 +41,7 @@
             <li><a
                 href="{{ route('register') }}"
                 class="mb-10 border-b-4 border-white">
-                Register
+                Anmelden
             </a></li>
         @endauth
     </ul>
