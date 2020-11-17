@@ -9,9 +9,8 @@
         <textarea
             name="body"
             class="w-full"
-            placeholder="Was denken Sie?"
+            placeholder="Was denken Sie über die Frage?"
             required
-            autofocus
         ></textarea>
 
         <hr class="my-4">

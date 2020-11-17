@@ -13,7 +13,7 @@
             class="font-bold text-lg mb-4 block text-gray-700 hover:text-gray-900"
             href="/explore"
         >
-            Explore User
+            Benutzerliste
         </a>
     </li>
 
@@ -23,7 +23,7 @@
                 class="font-bold text-lg mb-4 block text-gray-700 hover:text-gray-900"
                 href="{{ auth()->user() ? auth()->user()->profilePath() : '' }}"
             >
-                Profile
+                Profil
             </a>
         @endauth
     </li>

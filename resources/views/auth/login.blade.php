@@ -41,7 +41,7 @@
                 <label class="block mb-2 uppercase font-bold text-xs text-gray-700"
                        for="password"
                 >
-                    Password
+                    Passwort
                 </label>
 
                 <input class="border border-gray-400 p-2 w-full"
@@ -68,7 +68,7 @@
                     <label class="text-xs text-gray-700 font-bold uppercase"
                            for="remember"
                     >
-                        Remember Me
+                        Passwort speichern
                     </label>
                 </div>
 
@@ -82,7 +82,7 @@
                 <button type="submit"
                         class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500 mr-2"
                 >
-                    Submit
+                    Login
                 </button>
 
                 <div class="ml-2">
@@ -90,7 +90,7 @@
                         <a
                             href="{{ route('register') }}"
                             class="text-xs text-gray-600 hover:text-gray-800 hover:underline">
-                            Register
+                            Registrieren
                         </a>
                     </div>
 
@@ -98,7 +98,7 @@
                         <a
                             href="{{ route('password.request') }}"
                             class="text-xs text-gray-600 hover:text-gray-800 hover:underline">
-                            Forgot Your Password?
+                            Passwort vorgessen?
                         </a>
                     </div>
                 </div>

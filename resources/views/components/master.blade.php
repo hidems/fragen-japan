@@ -42,7 +42,7 @@
                                 @csrf
 
                                 <button class="font-bold text-lg text-gray-500 hover:text-gray-700">
-                                    Abmelden
+                                    Logout
                                 </button>
                             </form>
                         @else
@@ -51,7 +51,7 @@
                             </a>
                             @if (Route::has('register'))
                                 <a class="text-gray-500 hover:text-gray-700" href="{{ route('register') }}">
-                                    Anmelden
+                                    Registrieren
                                 </a>
                             @endif
                         @endauth

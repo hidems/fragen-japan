@@ -18,30 +18,33 @@
         <li><a
             href="/explore"
             class="mb-10 border-b-4 border-white">
-            Explore User
+            Benutzerliste
         </a></li>
         @auth
             <li><a
                 href="{{ auth()->user() ? auth()->user()->profilePath() : '' }}"
-                class="mb-10 border-b-4 border-white">
-                Profile
+                class="mb-10 border-b-4 border-white"
+                >
+                    Profil
             </a></li>
             <form method="POST" action="/logout">
                 @csrf
                 <button class="border-b-4 border-white">
-                    Abmelden
+                    Logout
                 </button>
             </form>
         @else
             <li><a
                 href="{{ route('login') }}"
-                class="mb-10 border-b-4 border-white">
-                Login
+                class="mb-10 border-b-4 border-white"
+                >
+                    Login
             </a></li>
             <li><a
                 href="{{ route('register') }}"
-                class="mb-10 border-b-4 border-white">
-                Anmelden
+                class="mb-10 border-b-4 border-white"
+                >
+                    Registrieren
             </a></li>
         @endauth
     </ul>

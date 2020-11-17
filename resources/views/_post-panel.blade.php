@@ -5,7 +5,7 @@
         <textarea
             name="body"
             class="w-full"
-            placeholder="Was ist Ihre Frage?"
+            placeholder="Was ist Ihre Frage über Japan?"
             required
             autofocus
         ></textarea>

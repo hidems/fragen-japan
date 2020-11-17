@@ -27,7 +27,7 @@
         <label class="block mb-2 uppercase font-bold text-xs text-gray-700"
                for="username"
         >
-            Username
+            Benutzername
         </label>
 
         <input class="border border-gray-400 p-2 w-full"
@@ -72,7 +72,7 @@
         <label class="block mb-2 uppercase font-bold text-xs text-gray-700"
                for="bio"
         >
-            Bio
+            Selbst beschreibung
         </label>
 
         <input class="border border-gray-400 p-2 w-full"
@@ -111,7 +111,7 @@
         <label class="block mb-2 uppercase font-bold text-xs text-gray-700"
                for="password"
         >
-            Password
+            Passwort
         </label>
 
         <input class="border border-gray-400 p-2 w-full"
@@ -130,7 +130,7 @@
         <label class="block mb-2 uppercase font-bold text-xs text-gray-700"
                for="password_confirmation"
         >
-            Password Confirmation
+            Passwort bestätigen
         </label>
 
         <input class="border border-gray-400 p-2 w-full"
@@ -149,10 +149,10 @@
         <button type="submit"
                 class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500 mr-4"
         >
-            Submit
+            Einreichen
         </button>
 
-        <a href="{{ $user->path() }}" class="hover:underline">Cancel</a>
+        <a href="{{ $user->path() }}" class="hover:underline">Canceln</a>
     </div>
 </form>
 @endcomponent

@@ -42,13 +42,15 @@
                         </g>
                         </svg>
 
-                    <span class="text-xs text-green-500">{{ count($post->comments) . ' Antworten Jetzt!!' }}</span>
+                    <span class="text-xs text-green-500">
+                        {{ count($post->comments) . (count($post->comments) == 1 ? ' Antwort' : ' Antworten') }}
+                    </span>
                 </div>
             </a>
 
             {{-- Post date --}}
             <div class="lg:ml-4 ml-6">
-                <p class="text-xs text-gray-500">Posted {{ $post->created_at->diffForHumans() }}</p>
+                <p class="text-xs text-gray-500">{{ $post->created_at->diffForHumans() }} gepostet</p>
             </div>
         </div>
     </div>

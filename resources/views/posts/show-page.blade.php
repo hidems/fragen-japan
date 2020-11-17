@@ -29,13 +29,15 @@
 
         {{-- Post date --}}
         <div class="">
-            <p class="text-xs text-gray-500">Posted {{ $post->created_at->diffForHumans() }}</p>
+            <p class="text-xs text-gray-500">{{ $post->created_at->diffForHumans() }} gepostet</p>
         </div>
     </div>
 </div>
 
 {{-- Number of comments --}}
-<h2 class="mt-8 font-bold text-xl">{{ count($comments) . ' Antworten Jetzt' }}</h2>
+<h2 class="mt-8 font-bold text-xl">
+    {{ count($post->comments) . (count($post->comments) == 1 ? ' Antwort' : ' Antworten') }}
+</h2>
 
 <hr>
 
@@ -67,12 +69,12 @@
             </p>
 
             <div class="">
-                <p class="text-xs text-gray-500">Posted {{ $comment->created_at->diffForHumans() }}</p>
+                <p class="text-xs text-gray-500">{{ $comment->created_at->diffForHumans() }} gepostet</p>
             </div>
         </div>
     </div>
     @empty
-        <p class="p-4">No comments yet.</p>
+        <p class="p-4">Noch keine Antworten.</p>
     @endforelse
 
     {{ $comments->links() }}
