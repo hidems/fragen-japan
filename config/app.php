@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Fragen über Japan'),
+    'name' => env('APP_NAME', 'Fragen_-Japan'),
 
     /*
     |--------------------------------------------------------------------------

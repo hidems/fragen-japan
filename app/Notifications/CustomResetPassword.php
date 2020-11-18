@@ -6,19 +6,27 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use Illuminate\Auth\Notifications\ResetPassword;
 
 class CustomResetPassword extends Notification
 {
     use Queueable;
 
     /**
+     * The password reset token.
+     *
+     * @var string
+     */
+    public $token;
+
+    /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($token)
     {
-        //
+        $this->token = $token;
     }
 
     /**
@@ -41,7 +49,7 @@ class CustomResetPassword extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->from('admin@example.com', config('app.name'))
+                    // ->from('password-reset@fragen-japan.com', config('app.name'))
                     ->subject('Passwort zurücksetzen')
                     ->line('Sie haben dieses E-Mail erhalten, da Sie eine Wiederherstellung Ihres Passworts angefordert haben.')
                     ->action('Passwort zurücksetzen', url(route('password.reset', ['token' => $this->token, 'email' => $notifiable->getEmailForPasswordReset()], false)))
