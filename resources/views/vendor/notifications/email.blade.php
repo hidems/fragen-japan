@@ -44,7 +44,8 @@
 {{ $salutation }}
 @else
 @lang('Mit freundlichen Grüßen'),<br>
-{{ config('app.name') }}
+{{-- {{ config('app.name') }} --}}
+Fragen über Japan
 @endif
 
 {{-- Subcopy --}}
