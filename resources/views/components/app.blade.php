@@ -1,5 +1,5 @@
 @component('components.master')
-    <section class="px-8">
+    <section class="lg:px-8 px-2">
         <main class="container mx-auto">
             <div class="lg:flex lg:justify-center">
 

@@ -20,7 +20,7 @@
 </head>
 <body>
     {{-- header --}}
-    <section class="px-8 py-4">
+    <section class="lg:px-8 px-2 py-4">
         <header class="container mx-auto">
             <div class="flex justify-between items-center">
                 {{-- Logo --}}
