@@ -22,7 +22,7 @@
         </a></li>
         @auth
             <li><a
-                href="{{ auth()->user() ? auth()->user()->profilePath() : '' }}"
+                href="{{ auth()->user() ? auth()->user()->path() : '' }}"
                 class="mb-10 border-b-4 border-white"
                 >
                     Profil

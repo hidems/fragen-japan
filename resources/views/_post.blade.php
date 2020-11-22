@@ -1,7 +1,7 @@
 <div class="flex p-4 border-b border-b-gray-400">
     {{-- User photo --}}
     <div class="mr-2 flex-shrink-0">
-        <a href="{{ $post->user_id ? $post->user->profilePath() : '' }}">
+        <a href="{{ $post->user_id ? $post->user->path() : '' }}">
             <img
                 src={{ $post->user_id ? $post->user->avatar : 'images/default-avatar.jpeg' }}
                 alt=""
@@ -16,7 +16,7 @@
         {{-- Name --}}
         <div class="mb-1">
             <h5 class="font-bold">
-                <a href="{{ $post->user_id ? $post->user->profilePath() : '' }}">
+                <a href="{{ $post->user_id ? $post->user->path() : '' }}">
                     {{ $post->user_id ? $post->user->name : "Ich habe eine Frage!!" }}
                 </a>
             </h5>

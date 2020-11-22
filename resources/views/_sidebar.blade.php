@@ -21,7 +21,7 @@
         @auth
             <a
                 class="font-bold text-lg mb-4 block text-gray-700 hover:text-gray-900"
-                href="{{ auth()->user() ? auth()->user()->profilePath() : '' }}"
+                href="{{ auth()->user() ? auth()->user()->path() : '' }}"
             >
                 Profil
             </a>
