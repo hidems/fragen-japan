@@ -28,9 +28,9 @@
                     <h1 class="logo">
                         <a href="{{ route('home') }}">
                             <img
-                                src="/images/logo.png"
+                                src="/images/logo-deer.png"
                                 alt="logo"
-                                class="h-12"
+                                class="lg:h-20 h-12"
                             >
                         </a>
                     </h1>
