@@ -26,11 +26,17 @@
                 <div class="flex justify-between items-center">
                     {{-- Logo --}}
                     <h1 class="logo">
-                        <a href="{{ route('home') }}">
+                        <a href="{{ route('home') }} " class="flex items-center">
                             <img
                                 src="/images/logo-deer.png"
-                                alt="logo"
+                                alt="logo-deer"
                                 class="lg:h-20 h-12"
+                                {{-- style="height: 4rem;" --}}
+                            >
+                            <img
+                                src="/images/logo-font.png"
+                                alt="logo-font"
+                                class="lg:h-16 h-10 ml-2"
                             >
                         </a>
                     </h1>
