@@ -23,20 +23,20 @@
         {{-- header --}}
         <section class="lg:px-8 px-2 py-4">
             <header class="container mx-auto">
-                <div class="flex justify-between items-center">
+                <div class="flex justify-between lg:items-center">
                     {{-- Logo --}}
                     <h1 class="logo">
-                        <a href="{{ route('home') }} " class="flex items-center">
+                        <a href="{{ route('home') }} " class="flex items-end">
                             <img
                                 src="/images/logo-deer.png"
                                 alt="logo-deer"
-                                class="lg:h-20 h-12"
+                                class="md:h-20 h-16"
                                 {{-- style="height: 4rem;" --}}
                             >
                             <img
                                 src="/images/logo-font.png"
                                 alt="logo-font"
-                                class="lg:h-16 h-10 ml-2"
+                                class="md:h-16 h-10 ml-2"
                             >
                         </a>
                     </h1>
