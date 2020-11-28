@@ -30,13 +30,13 @@
                             <img
                                 src="/images/logo-deer.png"
                                 alt="logo-deer"
-                                class="md:h-20 h-16"
+                                class="sm:h-20 h-12"
                                 {{-- style="height: 4rem;" --}}
                             >
                             <img
                                 src="/images/logo-font.png"
                                 alt="logo-font"
-                                class="md:h-16 h-10 ml-2"
+                                class="sm:h-16 h-8 ml-2"
                             >
                         </a>
                     </h1>
