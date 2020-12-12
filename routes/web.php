@@ -19,6 +19,8 @@ Route::post('/posts/{id}', 'PostsController@store_comment');
 
 Route::get('/explore', 'ExploreController');
 
+Route::get('/about', 'AboutController');
+
 Route::get('/profiles/{user}', 'ProfilesController@show')->name('profile');
 
 Route::middleware('auth')->group(function () {

@@ -18,6 +18,15 @@
     </li>
 
     <li>
+        <a
+            class="font-bold text-lg mb-4 block text-gray-700 hover:text-gray-900"
+            href="/about"
+        >
+            Über die Seite
+        </a>
+    </li>
+
+    <li>
         @auth
             <a
                 class="font-bold text-lg mb-4 block text-gray-700 hover:text-gray-900"
@@ -27,6 +36,7 @@
             </a>
         @endauth
     </li>
+
 </ul>
 
 

@@ -20,6 +20,11 @@
             class="mb-10 border-b-4 border-white">
             Benutzerliste
         </a></li>
+        <li><a
+            href="/about"
+            class="mb-10 border-b-4 border-white">
+            Über die Seite
+        </a></li>
         @auth
             <li><a
                 href="{{ auth()->user() ? auth()->user()->path() : '' }}"
