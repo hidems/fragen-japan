@@ -7,7 +7,7 @@
             class="w-full"
             placeholder="Was ist Ihre Frage über Japan?"
             required
-        ></textarea>
+        >{{ old('body') }}</textarea>
 
         <hr class="my-4">
 

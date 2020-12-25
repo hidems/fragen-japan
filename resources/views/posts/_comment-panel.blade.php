@@ -11,7 +11,7 @@
             class="w-full"
             placeholder="Was denken Sie über die Frage?"
             required
-        ></textarea>
+        >{{ old('body') }}</textarea>
 
         <hr class="my-4">
 
