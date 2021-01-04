@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="description" content="Sie können sich hier über Japan austauschen. Vielleicht kennen Sie sich auch gut in Japan aus. Dann können anderen Leuten helfen, indem Sie deren Fragen beantworten.">
+    <meta name="google-site-verification" content="8L69IizsVM2Q_C17im3gWUdfWVe4ogwYfD3c9hs-CAg" />
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
