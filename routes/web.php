@@ -29,3 +29,11 @@ Route::middleware('auth')->group(function () {
 });
 
 Auth::routes();
+
+// sitemap-indexのルート
+Route::get('sitemap.xml', 'SitemapController@index');
+// Route::group(['prefix' => 'sitemaps'], function() {
+//     // sitemapのルート
+//     Route::get('basics.xml', 'SitemapController@basics')->name('sitemap-basics');
+//     // sitemapを増やす場合はココに追記していく。
+// });
