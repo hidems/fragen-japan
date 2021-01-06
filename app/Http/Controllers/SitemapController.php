@@ -13,25 +13,25 @@ class SitemapController extends Controller
     public function index()
     {
         // create sitemap
-    $sitemap = App::make("sitemap");
+        $sitemap = App::make("sitemap");
 
-    // set cache
-    // $sitemap->setCache('laravel.sitemap-posts', 3600);
+        // set cache
+        // $sitemap->setCache('laravel.sitemap-posts', 3600);
 
-    // add items
-    $now = Carbon::now();
-    $sitemap->add(URL::to('/'), $now, '1.0', 'always');
-    $sitemap->add(URL::to('/about'), '2021-01-06', '1.0', 'yearly');
+        // add items
+        $now = Carbon::now();
+        $sitemap->add(URL::to('/'), $now, '1.0', 'always');
+        $sitemap->add(URL::to('/about'), '2021-01-06', '1.0', 'yearly');
 
-    // add posts
-    $posts = \DB::table('posts')->orderBy('created_at', 'desc')->get();
+        // add posts
+        $posts = \DB::table('posts')->orderBy('created_at', 'desc')->get();
 
-    foreach ($posts as $post)
-    {
-        $sitemap->add(URL::to('/posts/' . $post->id), $post->updated_at, '1.0', 'yearly');
-    }
+        foreach ($posts as $post)
+        {
+            $sitemap->add(URL::to('/posts/' . $post->id), $post->updated_at, '1.0', 'yearly');
+        }
 
-    // show sitemap
-    return $sitemap->render('xml');
+        // show sitemap
+        return $sitemap->render('xml');
     }
 }
