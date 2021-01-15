@@ -57,18 +57,22 @@
             </div>
 
 
+            {{-- Fixed to be always on Remenber Me function  --}}
+            {{-- type: checkbox->hidden, add value=on, comment out checked --}}
             <div class="mb-6">
                 <div>
                     <input class="mr-1"
-                           type="checkbox"
+                           type="hidden"
                            name="remember"
-                           id="remember" {{ old('remember') ? ' checked' : '' }}
+                           id="remember"
+                           value="on"
+                           {{-- {{ old('remember') ? ' checked' : '' }} --}}
                     >
 
                     <label class="text-xs text-gray-700 font-bold uppercase"
                            for="remember"
                     >
-                        Passwort speichern
+                        {{-- Passwort speichern --}}
                     </label>
                 </div>
 
