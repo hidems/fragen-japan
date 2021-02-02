@@ -29,6 +29,13 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
+    {{-- vue.js --}}
+    @if (env('APP_DEBUG'))
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    @else
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    @endif
+
 </head>
 <body class="flex flex-col min-h-screen">
     <div class="flex-1">
@@ -99,6 +106,9 @@
         </section>
         --}}
 
+        <div id="app">
+            @{{ message }}
+        </div>
         {{ $slot }}
     </div>
 
@@ -111,5 +121,13 @@
     <script> src="http://unpkg.com/turbolinks"</script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/sp-menu.js') }}" defer></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!'
+            }
+        })
+    </script>
 </body>
 </html>
