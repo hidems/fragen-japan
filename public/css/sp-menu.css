@@ -17,13 +17,13 @@
     background: #555;
   }
 
-/* アニメーション前のメニューの状態 */
+/* Menu before action */
 .menu {
     pointer-events: none;
     opacity: 0;
     transition: opacity .3s linear;
 }
-/* アニメーション後のメニューの状態 */
+/* Menu after action */
 .menu-btn.is-active {
     display: none;
 }
