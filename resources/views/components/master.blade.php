@@ -116,14 +116,14 @@
 
     <script> src="http://unpkg.com/turbolinks"</script>
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/sp-menu.js') }}" defer></script>
-    {{-- <script>
+    {{-- <script src="{{ asset('js/sp-menu.js') }}" defer></script> --}}
+    <script>
         var vm = new Vue({
             el: '#vue',
             data: {
                 isActive: false,
             }
         })
-    </script> --}}
+    </script>
 </body>
 </html>

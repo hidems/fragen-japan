@@ -24,10 +24,14 @@
     transition: opacity 0.3s linear;
 }
 /* Menu after action */
-.menu-btn.active {
+.menu-btn .active {
     display: none;
 }
-.menu.active {
+/* .menu .active {
+    pointer-events: auto;
+    opacity: 0.9;
+} */
+.activate_spmenu {
     pointer-events: auto;
     opacity: 0.9;
 }

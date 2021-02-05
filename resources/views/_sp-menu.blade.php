@@ -1,7 +1,6 @@
 {{-- sp-menu button --}}
 <div class="lg:hidden">
-    <button type="button" class="menu-btn">
-    {{-- <button type="button" class="menu-btn" v-on:click='isActive=!isActive'> --}}
+    <button type="button" class="menu-btn" v-on:click='isActive=!isActive'>
         <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
             <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/>
         </svg>
@@ -9,8 +8,7 @@
 </div>
 
 {{-- sp-menu--}}
-<div class="menu">
-{{-- <div class="menu" v-bind:class='{active:isActive}'> --}}
+<div class="menu" v-bind:class='{activate_spmenu:isActive}'>
     <ul class="text-5xl text-white bold">
         <li><a
             href="{{ route('home') }}"
