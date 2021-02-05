@@ -38,7 +38,7 @@
 
 </head>
 <body class="flex flex-col min-h-screen">
-    <div class="flex-1">
+    <div id="vue" class="flex-1">
         {{-- header --}}
         <section class="lg:px-8 px-2 py-4">
             <header class="container mx-auto">
@@ -105,10 +105,6 @@
             </div>
         </section>
         --}}
-
-        <div id="app">
-            @{{ message }}
-        </div>
         {{ $slot }}
     </div>
 
@@ -120,12 +116,12 @@
 
     <script> src="http://unpkg.com/turbolinks"</script>
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/sp-menu.js') }}" defer></script>
+    {{-- <script src="{{ asset('js/sp-menu.js') }}" defer></script> --}}
     <script>
-        var app = new Vue({
-            el: '#app',
+        var vue = new Vue({
+            el: '#vue',
             data: {
-                message: 'Hello Vue!'
+                isActive: false,
             }
         })
     </script>
