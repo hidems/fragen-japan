@@ -38,7 +38,7 @@
 
 </head>
 <body class="flex flex-col min-h-screen">
-    <div id="vue" class="flex-1">
+    <div id="vue" class="flex">
         {{-- header --}}
         <section class="lg:px-8 px-2 py-4">
             <header class="container mx-auto">
@@ -105,7 +105,9 @@
             </div>
         </section>
         --}}
-        {{ $slot }}
+        <div class="flex-1">
+            {{ $slot }}
+        </div>
     </div>
 
     {{-- Footer --}}
