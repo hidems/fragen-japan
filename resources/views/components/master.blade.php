@@ -38,7 +38,7 @@
 
 </head>
 <body class="flex flex-col min-h-screen">
-    <div id="vue" class="flex">
+    <div id="vue" class="">
         {{-- header --}}
         <section class="lg:px-8 px-2 py-4">
             <header class="container mx-auto">
@@ -105,16 +105,17 @@
             </div>
         </section>
         --}}
+
+        {{-- Slot --}}
         <div class="flex-1">
             {{ $slot }}
         </div>
+
+        {{-- Footer --}}
+        <footer class="py-2 bg-gray-600">
+            <p class="text-center text-xs text-white">Copyright © 2020 hidms All Rights Reserved.</p>
+        </footer>
     </div>
-
-    {{-- Footer --}}
-    <footer class="py-2 bg-gray-600">
-        <p class="text-center text-xs text-white">Copyright © 2020 hidms All Rights Reserved.</p>
-    </footer>
-
 
     <script> src="http://unpkg.com/turbolinks"</script>
     <script src="{{ asset('js/app.js') }}" defer></script>
