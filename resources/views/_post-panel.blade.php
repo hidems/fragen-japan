@@ -1,4 +1,4 @@
-<div class="border border-blue-400 rounded-lg px-8 py-6 mb-8">
+<div id="post-panel" class="border border-blue-400 rounded-lg px-8 py-6 mb-8">
     <form method="POST" action="/">
         @csrf
 
@@ -6,6 +6,7 @@
             name="body"
             class="w-full"
             placeholder="Was ist Ihre Frage über Japan?"
+            v-model="postPanelText"
             required
         >{{ old('body') }}</textarea>
 
@@ -19,13 +20,16 @@
                 width="50"
                 height="50"
             >
+            <div>
+                <small class="mr-6">@{{textAreaLength}}/255</small>
 
-            <button
-                type="submit"
-                class="bg-blue-500 hover:bg-blue-600 rounded-lg font-bold shadow px-10 text-sm text-white h-10"
-            >
-                Fragen
-            </button>
+                <button
+                    type="submit"
+                    class="bg-blue-500 hover:bg-blue-600 rounded-lg font-bold shadow px-10 text-sm text-white h-10"
+                >
+                    Fragen
+                </button>
+            </div>
         </footer>
     </form>
 
