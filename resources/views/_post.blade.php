@@ -24,7 +24,7 @@
 
         {{-- Body --}}
         <a href="{{ $post->path() }}">
-            <p class="text-sm mb-2">
+            <p class="text-sm mb-2 break-all">
                 {{ $post->body }}
             </p>
         </a>
