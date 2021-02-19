@@ -24,7 +24,8 @@
             <div class="flex items-center">
                 <small
                     class="rounded-full h-8 w-8 flex items-center justify-center
-                        bg-gray-500 mr-6 font-bold text-white"
+                        bg-gray-500 font-bold text-white
+                        mr-2 lg:mr-6"
                     v-bind:class="computedColor"
                 >
                     @{{leftTextLength}}
