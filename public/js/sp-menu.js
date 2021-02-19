@@ -6,7 +6,7 @@
 // }());
 
 var vm = new Vue({
-	el: '#vue',
+	el: '#sp-menu',
 	data: {
 		isActive: false,
 	}

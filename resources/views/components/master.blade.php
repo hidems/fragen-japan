@@ -38,7 +38,7 @@
 
 </head>
 <body class="flex flex-col min-h-screen">
-    <div id="vue" class="">
+    <div id="" class="">
         {{-- header --}}
         <section class="lg:px-8 px-2 py-4">
             <header class="container mx-auto">
