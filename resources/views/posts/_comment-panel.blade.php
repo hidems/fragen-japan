@@ -2,14 +2,16 @@
 
 <hr>
 
-<div class="border border-blue-400 rounded-lg px-8 py-6 mt-4 mb-8">
+<div id="comment-panel" class="border border-blue-400 rounded-lg px-8 py-6 mt-4 mb-8">
     <form method="POST" action="{{ $post->path() }}">
         @csrf
 
         <textarea
             name="body"
+            id="comment-panel-textarea"
             class="w-full"
             placeholder="Was denken Sie über die Frage?"
+            v-model="commentPanelText"
             required
         >{{ old('body') }}</textarea>
 
@@ -24,12 +26,22 @@
                 height="50"
             >
 
-            <button
-                type="submit"
-                class="bg-blue-500 hover:bg-blue-600 rounded-lg shadow px-10 text-sm text-white h-10"
-            >
-                Antwort
-            </button>
+            <div class="flex items-center">
+                <small
+                    class="rounded-full h-8 w-8 flex items-center justify-center
+                        bg-gray-500 font-bold text-white
+                        mr-2 lg:mr-6"
+                    v-bind:class="computedColor"
+                >@{{leftTextLength}}</small>
+
+                <button
+                    type="submit"
+                    class="bg-blue-500 hover:bg-blue-600 rounded-lg shadow px-10 text-sm text-white h-10"
+                >
+                    Antwort
+                </button>
+            </div>
+
         </footer>
     </form>
 

@@ -27,9 +27,7 @@
                         bg-gray-500 font-bold text-white
                         mr-2 lg:mr-6"
                     v-bind:class="computedColor"
-                >
-                    @{{leftTextLength}}
-                </small>
+                >@{{leftTextLength}}</small>
 
                 <button
                     type="submit"
