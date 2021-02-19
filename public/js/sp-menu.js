@@ -6,8 +6,8 @@
 // }());
 
 var spMenu = new Vue({
-    el: '#sp-menu',
-	data: {
-		isActive: false,
-	}
+  el: '#sp-menu',
+  data: {
+    isActive: false,
+  }
 })
