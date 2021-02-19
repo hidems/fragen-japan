@@ -18,8 +18,17 @@ var postPanel = new Vue({
         postPanelText: '',
     },
     computed: {
-        textAreaLength: function () {
-            return this.postPanelText.length;
+        leftTextLength: function () {
+            return 255 - this.postPanelText.length
+        },
+        computedColor: function () {
+            if (this.leftTextLength === 255) {
+                return 'hidden'
+            } else if(this.leftTextLength < 0) {
+                return 'bg-red-500'
+            } else if (this.leftTextLength < 20) {
+                return 'bg-green-500'
+            }
         }
     }
 })

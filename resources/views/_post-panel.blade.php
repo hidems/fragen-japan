@@ -20,8 +20,14 @@
                 width="50"
                 height="50"
             >
-            <div>
-                <small class="mr-6">@{{textAreaLength}}/255</small>
+            <div class="flex items-center">
+                <small
+                    class="rounded-full h-8 w-8 flex items-center justify-center
+                        bg-gray-500 mr-6 font-bold text-white"
+                    v-bind:class="computedColor"
+                >
+                    @{{leftTextLength}}
+                </small>
 
                 <button
                     type="submit"
