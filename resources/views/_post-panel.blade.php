@@ -4,6 +4,7 @@
 
         <textarea
             name="body"
+            id="post-panel-textarea"
             class="w-full"
             placeholder="Was ist Ihre Frage über Japan?"
             v-model="postPanelText"

@@ -15,7 +15,8 @@ var spMenu = new Vue({
 var postPanel = new Vue({
     el: '#post-panel',
     data: {
-        postPanelText: '',
+        // Get old value in Laravel
+        postPanelText: document.getElementById('post-panel-textarea').value,
     },
     computed: {
         leftTextLength: function () {
