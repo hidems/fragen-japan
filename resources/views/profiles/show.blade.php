@@ -23,15 +23,13 @@
                     >
                         Profil bearbeiten
                     </a>
-                 @endcan
+                @endcan
             </div>
         </div>
 
         <p class="text-sm">
             {{ $user->bio }}
         </p>
-
-
 
     </header>
 
