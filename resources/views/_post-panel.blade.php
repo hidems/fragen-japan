@@ -1,5 +1,6 @@
 <div id="post-panel" class="border border-blue-400 rounded-lg px-8 py-6 mb-8">
-    <form method="POST" action="/">
+    {{-- <form method="POST" action="{{ $posts->path() }}"> --}}
+    <form method="POST" action="{{ url()->current() }}">
         @csrf
 
         <textarea
@@ -15,7 +16,7 @@
 
         <footer class="flex justify-between items-center">
             <img
-                src={{ auth()->user() ? auth()->user()->avatar : 'images/default-avatar.jpeg' }}
+                src={{ auth()->user() ? auth()->user()->avatar : asset('images/default-avatar.jpeg') }}
                 alt="your avatar"
                 class="rounded-full mr-2"
                 width="50"

@@ -3,7 +3,7 @@
     <div class="mr-2 flex-shrink-0">
         <a href="{{ $post->user_id ? $post->user->path() : '' }}">
             <img
-                src={{ $post->user_id ? $post->user->avatar : 'images/default-avatar.jpeg' }}
+                src={{ $post->user_id ? $post->user->avatar : asset('images/default-avatar.jpeg') }}
                 alt=""
                 class="rounded-full mr-2"
                 width="50"
