@@ -3,9 +3,9 @@
 <div class="flex p-4 border border-gray-400 rounded-lg mb-8">
     {{-- User Photo --}}
     <div class="mr-2 flex-shrink-0">
-        <a href="{{ $post->user_id ? $post->user->profilePath() : '' }}">
+        <a href="{{ $posts->user_id ? $posts->user->profilePath() : '' }}">
             <img
-                src={{ $post->user_id ? $post->user->avatar : '../images/default-avatar.jpeg' }}
+                src={{ $posts->user_id ? $posts->user->avatar : '../images/default-avatar.jpeg' }}
                 alt=""
                 class="rounded-full mr-2"
                 width="50"
@@ -17,26 +17,26 @@
     <div>
         {{-- Name --}}
         <h5 class="font-bold mb-2">
-            <a href="{{ $post->user_id ? $post->user->profilePath() : '' }}">
-                {{ $post->user_id ? $post->user->name : "Ich habe eine Frage!!" }}
+            <a href="{{ $posts->user_id ? $posts->user->profilePath() : '' }}">
+                {{ $posts->user_id ? $posts->user->name : "Ich habe eine Frage!!" }}
             </a>
         </h5>
 
         {{-- Body --}}
         <p class="text-sm mb-3">
-            {{ $post->body }}
+            {{ $posts->body }}
         </p>
 
-        {{-- Post date --}}
+        {{-- Post Date --}}
         <div class="">
-            <p class="text-xs text-gray-500">{{ $post->created_at->diffForHumans() }} gepostet</p>
+            <p class="text-xs text-gray-500">{{ $posts->created_at->diffForHumans() }} gepostet</p>
         </div>
     </div>
 </div>
 
 {{-- Number of comments --}}
 <h2 class="mt-8 font-bold text-xl">
-    {{ count($post->comments) . (count($post->comments) == 1 ? ' Antwort' : ' Antworten') }}
+    {{ count($posts->comments) . (count($posts->comments) == 1 ? ' Antwort' : ' Antworten') }}
 </h2>
 
 <hr>
@@ -69,7 +69,7 @@
             </p>
 
             <div class="">
-                <p class="text-xs text-gray-500">{{ $comment->created_at->diffForHumans() }} gepostet</p>
+                <p class="text-xs text-gray-500">{{ $comment->created_at->diffForHumans() }} gepostset</p>
             </div>
         </div>
     </div>
@@ -81,6 +81,8 @@
 </div>
 
 {{-- comment-panel --}}
-@include('posts._comment-panel')
+{{-- @include('posts._comment-panel') --}}
+@include('_post-panel')
+
 
 @endcomponent

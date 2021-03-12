@@ -38,7 +38,7 @@ class PostsController extends Controller
         // return $comments;
 
         return view('posts.show-page', [
-            'post' => $post,
+            'posts' => $post,
             'comments' => $comments,
         ]);
     }
