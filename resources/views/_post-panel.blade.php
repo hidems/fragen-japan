@@ -1,6 +1,6 @@
-{{-- {{ $posts->path() }} --}}
 <div id="post-panel" class="border border-blue-400 rounded-lg px-8 py-6 mb-8">
-    <form method="POST" action="{{ $posts->path() }}">
+    {{-- <form method="POST" action="{{ $posts->path() }}"> --}}
+    <form method="POST" action="{{ url()->current() }}">
         @csrf
 
         <textarea
