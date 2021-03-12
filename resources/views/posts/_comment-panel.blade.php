@@ -11,7 +11,7 @@
             id="comment-panel-textarea"
             class="w-full"
             placeholder="Was denken Sie über die Frage?"
-            v-model="commentPanelText"
+            v-model.trim="commentPanelText"
             required
         >{{ old('body') }}</textarea>
 
