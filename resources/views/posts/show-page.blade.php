@@ -5,7 +5,7 @@
     <div class="mr-2 flex-shrink-0">
         <a href="{{ $posts->user_id ? $posts->user->profilePath() : '' }}">
             <img
-                src={{ $posts->user_id ? $posts->user->avatar : '../images/default-avatar.jpeg' }}
+                src={{ $posts->user_id ? $posts->user->avatar : asset('images/default-avatar.jpeg') }}
                 alt=""
                 class="rounded-full mr-2"
                 width="50"
@@ -48,7 +48,7 @@
         <div class="mr-2 flex-shrink-0">
             <a href="{{ $comment->user_id ? $comment->user->profilePath() : '' }}">
                 <img
-                    src={{ $comment->user_id ? $comment->user->avatar : '../images/default-avatar.jpeg' }}
+                    src={{ $comment->user_id ? $comment->user->avatar : asset('images/default-avatar.jpeg') }}
                     alt=""
                     class="rounded-full mr-2"
                     width="50"
@@ -81,7 +81,6 @@
 </div>
 
 {{-- comment-panel --}}
-{{-- @include('posts._comment-panel') --}}
 @include('_post-panel')
 
 
