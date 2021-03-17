@@ -1,4 +1,4 @@
-<div id="post-panel" class="border border-blue-400 rounded-lg lg:px-8 lg:py-6 px-4 py-3 mb-8">
+<div id="post-panel" class="border border-blue-400 rounded-lg sm:px-8 sm:py-6 px-4 py-3 mb-8">
     <form method="POST" action="{{ url()->current() }}">
         @csrf
 
@@ -8,7 +8,8 @@
             class="w-full"
             placeholder="Was ist Ihre Frage über Japan?"
             v-model.trim="postPanelText"
-            :rows="postPanelText.split(/\n|\r\n|\r/).length + 2"
+            {{-- :rows="postPanelText.split(/\n|\r\n|\r/).length + 3" --}}
+            :rows="postPanelText.split(/\n|\r\n|\r/).length + postPanelText.length/60 + 3"
             required
         >{{ old('body') }}</textarea>
 
