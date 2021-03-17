@@ -8,7 +8,7 @@
             class="w-full"
             placeholder="Was ist Ihre Frage über Japan?"
             v-model.trim="postPanelText"
-            :rows="postPanelText.split(/\n|\r\n|\r/).length + 1"
+            :rows="postPanelText.split(/\n|\r\n|\r/).length + 2"
             required
         >{{ old('body') }}</textarea>
 
