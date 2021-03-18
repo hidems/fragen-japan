@@ -6,7 +6,7 @@ if ($('#post-panel-textarea').length) {
     data: {
       // Get old value in Laravel
       // postPanelText: ''
-      postPanelText: document.getElementById('post-panel-textarea').value
+      postPanelText: document.getElementById('post-panel-textarea').value,
     },
     computed: {
       // Get rest of length of textarea
@@ -24,8 +24,31 @@ if ($('#post-panel-textarea').length) {
         } else if (this.leftTextLength < 20) {
           return 'bg-green-500'
         }
-      }
-    }
+      },
+      // addRowsByLength: function () {
+      //   if (window.innerWidth <= 640) {
+      //     return this.postPanelText.length / 60
+      //   } else {
+      //     return 0
+      //   }
+      // },
+    },
+    methods: {
+      addRowsByLength: function () {
+        console.log(window.innerWidth);
+        if (window.innerWidth <= 640) {
+          return this.postPanelText.length / 60
+        } else {
+          return 0
+        }
+      },
+    },
+    mounted() {
+      window.addEventListener('resize', this.addRowsByLength);
+    },
+    beforeDestroy() {
+      window.removeEventListener('resize', this.addRowsByLength);
+    },
   })
 }
 

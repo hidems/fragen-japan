@@ -9,7 +9,8 @@
             placeholder="Was ist Ihre Frage über Japan?"
             v-model.trim="postPanelText"
             {{-- :rows="postPanelText.split(/\n|\r\n|\r/).length + 3" --}}
-            :rows="postPanelText.split(/\n|\r\n|\r/).length + postPanelText.length/60 + 3"
+            {{-- :rows="postPanelText.split(/\n|\r\n|\r/).length + postPanelText.length/60 + 3" --}}
+            v-bind:rows="postPanelText.split(/\n|\r\n|\r/).length + addRowsByLength() + 3"
             required
         >{{ old('body') }}</textarea>
 
