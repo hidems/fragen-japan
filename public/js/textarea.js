@@ -5,8 +5,7 @@ if ($('#post-panel-textarea').length) {
     el: '#post-panel',
     data: {
       // Get old value in Laravel
-      // postPanelText: ''
-      postPanelText: document.getElementById('post-panel-textarea').value
+      postPanelText: document.getElementById('post-panel-textarea').value,
     },
     computed: {
       // Get rest of length of textarea
@@ -24,8 +23,25 @@ if ($('#post-panel-textarea').length) {
         } else if (this.leftTextLength < 20) {
           return 'bg-green-500'
         }
-      }
-    }
+      },
+    },
+    methods: {
+      // Add rows to textarea by Line break and window width
+      addRows: function () {
+        res = this.postPanelText.split(/\n|\r\n|\r/).length + 2
+        if (window.innerWidth <= 640) {
+          res += this.postPanelText.length / 80 + 2
+        }
+        return res
+      },
+    },
+    // EventListener for addRows methods
+    mounted() {
+      window.addEventListener('resize', this.addRows);
+    },
+    beforeDestroy() {
+      window.removeEventListener('resize', this.addRows);
+    },
   })
 }
 
