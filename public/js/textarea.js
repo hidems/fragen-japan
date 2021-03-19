@@ -27,14 +27,16 @@ if ($('#post-panel-textarea').length) {
       },
     },
     methods: {
+      // Add rows to textarea by Line break and window width
       addRows: function () {
-        res = this.postPanelText.split(/\n|\r\n|\r/).length + 3
+        res = this.postPanelText.split(/\n|\r\n|\r/).length + 2
         if (window.innerWidth <= 640) {
-          res += this.postPanelText.length / 60
+          res += this.postPanelText.length / 80 + 2
         }
         return res
       },
     },
+    // EventListener for addRows methods
     mounted() {
       window.addEventListener('resize', this.addRows);
     },

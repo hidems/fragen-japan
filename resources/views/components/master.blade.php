@@ -120,6 +120,6 @@
     <script> src="http://unpkg.com/turbolinks"</script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/sp-menu.js') }}" defer></script>
-    <script src="{{ asset('js/count-textarea.js') }}" defer></script>
+    <script src="{{ asset('js/textarea.js') }}" defer></script>
 </body>
 </html>
