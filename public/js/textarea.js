@@ -5,7 +5,6 @@ if ($('#post-panel-textarea').length) {
     el: '#post-panel',
     data: {
       // Get old value in Laravel
-      // postPanelText: ''
       postPanelText: document.getElementById('post-panel-textarea').value,
     },
     computed: {
