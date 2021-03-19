@@ -25,29 +25,21 @@ if ($('#post-panel-textarea').length) {
           return 'bg-green-500'
         }
       },
-      // addRowsByLength: function () {
-      //   if (window.innerWidth <= 640) {
-      //     return this.postPanelText.length / 60
-      //   } else {
-      //     return 0
-      //   }
-      // },
     },
     methods: {
-      addRowsByLength: function () {
-        console.log(window.innerWidth);
+      addRows: function () {
+        res = this.postPanelText.split(/\n|\r\n|\r/).length + 3
         if (window.innerWidth <= 640) {
-          return this.postPanelText.length / 60
-        } else {
-          return 0
+          res += this.postPanelText.length / 60
         }
+        return res
       },
     },
     mounted() {
-      window.addEventListener('resize', this.addRowsByLength);
+      window.addEventListener('resize', this.addRows);
     },
     beforeDestroy() {
-      window.removeEventListener('resize', this.addRowsByLength);
+      window.removeEventListener('resize', this.addRows);
     },
   })
 }
