@@ -29,12 +29,12 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-    {{-- vue.js --}}
-    @if (env('APP_DEBUG'))
+    {{-- vue.js by CDN --}}
+    {{-- @if (env('APP_DEBUG'))
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     @else
         <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    @endif
+    @endif --}}
 
 </head>
 <body class="flex flex-col min-h-screen">
