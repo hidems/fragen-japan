@@ -12,10 +12,10 @@ class PostsController extends Controller
 {
     public function index()
     {
-        return Post::latest()->paginate(50);
+        return Post::all();
     }
 
-    public function show(Post $post)
+    public function detail(Post $post)
     {
         return $post;
     }

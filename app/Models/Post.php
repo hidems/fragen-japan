@@ -22,4 +22,12 @@ class Post extends Model
     {
         return route('post', $this->id);
     }
+
+    // Include comments for json output
+    public function toArray()
+    {
+        return array_merge(parent::toArray(), [
+            'comments'=>$this->comments,
+        ]);
+    }
 }
