@@ -14,4 +14,9 @@ class PostsController extends Controller
     {
         return Post::latest()->paginate(50);
     }
+
+    public function show(Post $post)
+    {
+        return $post;
+    }
 }
