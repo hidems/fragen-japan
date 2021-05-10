@@ -49886,8 +49886,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /usr/src/app/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /usr/src/app/resources/css/main.css */"./resources/css/main.css");
+__webpack_require__(/*! /home/hidms/fragen-japan/src/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/hidms/fragen-japan/src/resources/css/main.css */"./resources/css/main.css");
 
 
 /***/ })

@@ -18,6 +18,11 @@ class PostsController extends Controller
         ]);
     }
 
+    public function api_index()
+    {
+        return Post::latest()->paginate(50);
+    }
+
     public function store()
     {
         $attributes = request()->validate(['body' => 'required|max:255']);
