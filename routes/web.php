@@ -28,6 +28,11 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profiles/{user}', 'ProfilesController@update')->middleware('can:edit,user');
 });
 
+Route::get('/api_test', function () {
+    return view('posts/api-test');
+});
+
+
 Auth::routes();
 
 // sitemap-indexのルート
