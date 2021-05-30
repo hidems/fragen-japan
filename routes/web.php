@@ -29,7 +29,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/api_test', function () {
-    return view('posts/api-test');
+    return view('spa/master');
 });
 
 
