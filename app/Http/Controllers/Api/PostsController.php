@@ -12,7 +12,9 @@ class PostsController extends Controller
 {
     public function index()
     {
-        return Post::all();
+        $posts = Post::latest()->paginate(50);
+
+        return $posts;
     }
 
     public function detail(Post $post)
