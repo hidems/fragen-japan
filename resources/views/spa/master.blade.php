@@ -40,7 +40,7 @@
 <body>
     <div id="app">
         <header-component></header-component>
-        <example-component></example-component>
+        <footer-component></footer-component>
     </div>
 
     {{-- script --}}
