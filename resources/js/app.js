@@ -6,8 +6,8 @@
 
 import HeaderComponent from "./components/HeaderComponent";
 import FooterComponent from "./components/FooterComponent";
+import BodyComponent from "./components/BodyComponent";
 import TimelineComponent from "./components/TimelineComponent";
-
 
 require('./bootstrap');
 
@@ -26,6 +26,7 @@ window.Vue = require('vue');
 
 Vue.component('header-component', HeaderComponent);
 Vue.component('footer-component', FooterComponent);
+Vue.component('body-component', BodyComponent);
 Vue.component('timeline-component', TimelineComponent);
 
 

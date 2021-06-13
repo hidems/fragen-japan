@@ -40,7 +40,7 @@
 <body>
     <div id="app">
         <header-component></header-component>
-        <timeline-component></timeline-component>
+        <body-component></body-component>
         <footer-component></footer-component>
     </div>
 
