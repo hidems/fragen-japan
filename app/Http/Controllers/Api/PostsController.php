@@ -12,7 +12,7 @@ class PostsController extends Controller
 {
     public function index()
     {
-        $posts = Post::latest()->paginate(50);
+        $posts = Post::with(['user'])->latest()->paginate(50);
 
         return $posts;
     }
