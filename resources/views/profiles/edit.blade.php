@@ -118,7 +118,6 @@
                type="password"
                name="password"
                id="password"
-               required
         >
 
         @error('password')
@@ -137,7 +136,6 @@
                type="password"
                name="password_confirmation"
                id="password_confirmation"
-               required
         >
 
         @error('password_confirmation')
