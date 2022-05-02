@@ -30,14 +30,20 @@ class ProfilesController extends Controller
             'avatar' => ['file'],
             'bio' => ['string', 'max:255'],
             'email' => ['string', 'required', 'email', 'max:255', Rule::unique('users')->ignore($user)],
-            'password' => ['string', 'required', 'min:8', 'max:255', 'confirmed'],
         ]);
 
         if(request('avatar')) {
             $attributes['avatar'] = request('avatar')->store('avatar');
         }
 
-        $attributes['password'] = Hash::make(request('password'));
+        if(request('password')) {
+            // Validation for passowrd works only input password.
+            $attributes = request()->validate([
+                'password' => ['string', 'min:8', 'max:255', 'confirmed'],
+            ]);
+
+            $attributes['password'] = Hash::make(request('password'));
+        }
 
         $user->update($attributes);
 
