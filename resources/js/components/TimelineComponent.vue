@@ -1,9 +1,4 @@
 <template>
-<!-- <div>
-    <div v-for="(post, index) in posts" :key="index">
-        {{ post.body }}
-    </div>
-</div> -->
 <div  class="border border-gray-300 rounded-lg mb-8">
     <div v-for="(post, index) in posts" :key="index">
         <div class="flex p-4 border-b border-b-gray-400">
@@ -11,7 +6,7 @@
             <div class="mr-2 flex-shrink-0">
                 <a href="">
                     <img
-                        src=""
+                        v-bind:src="post.user_id ? post.user.avatar : '/images/default-avatar.jpeg'"
                         alt=""
                         class="rounded-full mr-2"
                         width="50"
@@ -25,7 +20,8 @@
                 <div class="mb-1">
                     <h5 class="font-bold">
                         <a href="">
-                            <!-- {{ post.user_id ? post.user_id : "Ich habe eine Frage!!" }} -->
+                            {{ post.user_id ? post.user.name : "Ich habe eine Frage!!" }}
+                            {{ post.user_id ? post.user.avatar : "Keine Avatar" }}
                         </a>
                     </h5>
                 </div>
