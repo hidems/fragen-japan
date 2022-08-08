@@ -1,3 +1,11 @@
+## Version recommendation/specification
+```
+PHP 7.4.*
+Laravel 6.*
+composer 2.1.11
+* Latest composer version is for PHP 8~, some func does not work.
+```
+
 ## Setting .env in laravel
 
 ```
